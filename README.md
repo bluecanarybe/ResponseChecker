@@ -2,8 +2,6 @@
 A Go program that returns the HTTP responses when feeded a list of domains
 
 ## usage
-git# PunyCodeGenerator
-
 
 1. Clone tool `git clone https://github.com/bluecanarybe/ResponseChecker.git`
 2. Build tool with `go build`
