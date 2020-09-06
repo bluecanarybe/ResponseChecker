@@ -12,6 +12,7 @@ git# PunyCodeGenerator
 ### Example
 
 ```
+./ResponseChecker tesla.txt
 		_____                                              _____  _                  _
 		|  __ \                                            / ____|| |                | |
 		| |__) | ___  ___  _ __    ___   _ __   ___   ___ | |     | |__    ___   ___ | | __ ___  _ __
@@ -23,7 +24,7 @@ git# PunyCodeGenerator
 
 BY BLUECANARY.BE
 
-                                  URL                                           HTTP Response Code
+                                  URL                                         ,  HTTP Response Code
   http://livestreamapi-test.tesla.com                                                        200 OK
   http://envoy-partnertasks.tesla.com                                                 Request error
                 http://grid.tesla.com                                                 403 Forbidden
