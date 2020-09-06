@@ -1,4 +1,4 @@
-package main
+ package main
 
 import (
 	"bufio"
@@ -16,6 +16,8 @@ func httpstatus(url string) {
 	// initalize tabwriter
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 1, '.', tabwriter.AlignRight|tabwriter.Debug)
 	w.Init(os.Stdout, 60, 0, 1, ' ', tabwriter.AlignRight)
+
+	//make sure we skip TLS checks to avoid false positives
 	http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
 	response, error := http.Get(url)
 
@@ -79,3 +81,4 @@ BY BLUECANARY.BE
 	}
 
 }
+
