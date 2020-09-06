@@ -5,7 +5,7 @@ A Go program that returns the HTTP responses when feeded a list of domains
 
 1. Clone tool `git clone https://github.com/bluecanarybe/ResponseChecker.git`
 2. Build tool with `go build`
-3. Run tool with `./ResponseChecker <file>
+3. Run tool with `./ResponseChecker <file>`
 
 ### Example
 
