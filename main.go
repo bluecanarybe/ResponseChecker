@@ -20,12 +20,10 @@ func httpstatus(url string) string {
 	response, error := http.Get(url)
 
 	if error != nil {
-		// fmt.Println(url, " - domain not available")
 		fmt.Fprintln(w, url, "\t", "Request error\t")
 		w.Flush()
 		return ("Domain available!")
 	} else {
-		//fmt.Println(url, " - HTTP Response Status:", response.StatusCode, http.StatusText(response.StatusCode))
 		fmt.Fprintln(w, url, "\t", response.StatusCode, http.StatusText(response.StatusCode), "\t")
 		w.Flush()
 		return ("Domain not available!")
