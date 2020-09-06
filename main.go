@@ -11,22 +11,20 @@ import (
 )
 
 // function to get http status
-func httpstatus(url string) string {
+func httpstatus(url string) {
 
 	// initalize tabwriter
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 1, '.', tabwriter.AlignRight|tabwriter.Debug)
-	w.Init(os.Stdout, 70, 0, 1, ' ', tabwriter.AlignRight)
+	w.Init(os.Stdout, 60, 0, 1, ' ', tabwriter.AlignRight)
 	http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
 	response, error := http.Get(url)
 
 	if error != nil {
 		fmt.Fprintln(w, url, "\t", "Request error\t")
 		w.Flush()
-		return ("Domain available!")
 	} else {
 		fmt.Fprintln(w, url, "\t", response.StatusCode, http.StatusText(response.StatusCode), "\t")
 		w.Flush()
-		return ("Domain not available!")
 	}
 }
 
@@ -52,7 +50,7 @@ BY BLUECANARY.BE
 
 	// initalize tabwriter
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 1, '.', tabwriter.AlignRight|tabwriter.Debug)
-	w.Init(os.Stdout, 70, 0, 1, ' ', tabwriter.AlignRight)
+	w.Init(os.Stdout, 60, 0, 1, ' ', tabwriter.AlignRight)
 
 	// read text file as input
 	inputfile := os.Args[1]
