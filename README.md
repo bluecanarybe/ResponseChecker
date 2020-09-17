@@ -30,3 +30,5 @@ BY BLUECANARY.BE
            http://marketing.tesla.com                                                 403 Forbidden
 http://secure-static-assets.tesla.com                                                 404 Not Found
 ```                                  
+### Disclaimer
+My code probably sucks but it does the job for me. If you don't like it, go on or create a pull request.
